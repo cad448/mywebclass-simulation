@@ -34,38 +34,59 @@
 
 <body>
 <style>
- body {
+     body {
       background-color: #282828;
  }
  body {
   color: white;
 }
+ div .container {
+
+    width:100vw;
+    float:none;
+    margin:0 auto;
+}
+     .dropdown-item a {
+        text-decoration: none;
+        color: black;
+    }
+    .nav-item a:hover {
+        width: 100%;
+        color: white;
+        background-color: blue;
+    }
 </style>
 <div class="container-fluid">
-    <header class="fixed-top" role="banner">
-        <nav aria-label="Breadcrumb" class="py-3 d-none d-md-block">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-auto text-start">
-                        <ol class="breadcrumb my-0">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li aria-current="page" class="breadcrumb-item active">Privacy Policy</li>
-                        </ol>
-                    </div>
-                </div>
+<header class="sticky-top" role="banner" >
+       <nav class = "navbar navbar-expand-lg p-3 justify-content-between navbar-dark bg-dark" >
+             <a class="navbar-brand" href="index.html">MyWebClass.org</a>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" type="button" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                    </button>
+            <div class = "collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"></li>
+                    <li class="nav-item dropdown"></li>
+                </ul>
+                <form class="d-flex ms-auto">
+                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
-        </nav>
-    </header>
+       </nav>
+       </nav>
+   </header>
 
     <div class="container">
         <div class="row">
+            <div class="col-sm-9 col-lg-9">
             <!-- Main content area -->
             <main class="col-md-9 ms-sm-auto col-lg-9 px-md-4">
-                <h1 class="fw-bold border-bottom" id="title">Privacy Policy</h1>
+                <h1 class="display-2 text-decoration-underline"><b>Privacy Policy</b></h1>
                 <div class="text-muted mb-3 ">By <a href="#">Callie Bryan Truong</a><span class="text-muted me-3">. Last Updated: March 21, 2023</span></div>
                 <div class="text-muted">Site visits: <span id="readingTime">0</span></div>
                 <section class="row">
-                    <h1>Privacy Policy for MyWebClass.org</h1>
+                    <h1 id="scrollspyHeading1">Privacy Policy for MyWebClass.org</h1>
 
                     <p>MyWebClass.org was created for and is intended to be used for the IS218 (Spring 2023) course at the
                         New Jersey Institute of Technology, taught by Professor Keith Williams. This page is used to inform
@@ -75,7 +96,7 @@
                         this policy. The Personal Information that we collect is used for providing and improving the service.
                         We will not use or share your information with anyone except as described in this Privacy Policy.</p>
 
-                    <h2>Information Collection and Use</h2>
+                    <h2 id="scrollspyHeading2">Information Collection and Use</h2>
 
                     <p>While using our Site, we may ask you to provide us with certain personally identifiable information that can be
                         used to contact or identify you. Personally identifiable information may include, but is not limited to your
@@ -85,7 +106,7 @@
                         viewed, the time spent on the Site, and the websites visited just before and just after our Site.
                         This information is collected through the use of cookies and Google Analytics.</p>
 
-                    <h2>Google Analytics</h2>
+                    <h2 id="scrollspyHeading3">Google Analytics</h2>
 
                     <p>We use Google Analytics to collect information about visitor behavior on our Site. This information is used to
                         compile reports and to help us improve the Site. The information collected is anonymous and does not personally
@@ -98,20 +119,20 @@
                         browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept
                         cookies, you may not be able to use some portions of our Site.</p>
 
-                    <h2>Security</h2>
+                    <h2 id="scrollspyHeading4">Security</h2>
 
                     <p>The security of your Personal Information is important to us, but remember that no method of transmission over
                         the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable
                         means to protect your Personal Information, we cannot guarantee its absolute security.</p>
 
-                    <h2>Links to Other Sites</h2>
+                    <h2 id="scrollspyHeading5">Links to Other Sites</h2>
 
                     <p>Our Site may contain links to other sites that are not operated by us. If you click on a third-party link, you
                         will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site
                         you visit. We have no control over and assume no responsibility for the content, privacy policies or practices
                         of any third-party sites or services.</p>
 
-                    <h2>Changes to This Privacy Policy</h2>
+                    <h2 id="scrollspyHeading6">Changes to This Privacy Policy</h2>
 
                     <p>We reserve the right and may update our Privacy Policy from time to time without notice. We will modify any
                         changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy
@@ -119,7 +140,32 @@
                         this page.</p>
 
                 </section>
-
+                </div>
+<div class=" d-sm-none d-md-block collapse w-25">
+     <nav id="navbar-example2" class="flex-column navbar navbar-light">
+  <a class="navbar-brand text-muted" href="#">On this page:</a>
+  <ul class="nav nav-pills flex-column  ">
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading1">Privacy Policy</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading2">Info Collection</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading3">Google Analytics</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading4">Security</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading5">Links</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading6">Changes to Policy</a>
+    </li>
+  </ul>
+</nav>
+</div>
 
             </main>
         </div>

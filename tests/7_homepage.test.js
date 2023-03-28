@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test')
 
-test('Accepting cookie closes modal', async ({ page }) => {
+test('Test HomePage Accepting Cookie', async ({ page }) => {
   await page.goto('http://localhost:3000')
   const modal = await page.$('.cookie-modal')
   if (modal) {

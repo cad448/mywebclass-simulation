@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test')
 
-test.describe('Language Test', () => {
+test.describe('Test Language', () => {
   let page
 
   test.beforeEach(async ({ browser }) => {
@@ -14,6 +14,6 @@ test.describe('Language Test', () => {
   test('Should have correct language attribute', async () => {
     await page.goto('http://localhost:3000')
     const lang = await page.getAttribute('html', 'lang')
-    expect(lang).toBe('EN')
+    expect(lang).toBe('EN') // english
   })
 })

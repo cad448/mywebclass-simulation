@@ -1,4 +1,3 @@
-// @ts-check
 const { test, expect } = require('@playwright/test')
 
 test('Should have MyWebClass.org title', async ({ page }) => {

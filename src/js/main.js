@@ -77,7 +77,7 @@ function loadGoogleAnalytics () {
 
   // Load the Google Analytics tracking code
   const script = document.createElement('script')
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}'
   script.async = true
   document.head.appendChild(script)
 
@@ -109,21 +109,3 @@ document.addEventListener('DOMContentLoaded', () => {
   createPrivacyModal()
   loadGoogleAnalytics()
 })
-
-document.addEventListener("DOMContentLoaded", function() {
-    var cookieConsent = document.getElementById("cookie-consent");
-
-    // Check if cookie is present
-    if (getCookie("cookie_consent") === "true") {
-        // Cookie is present, do nothing
-    } else {
-        // Cookie is not present, show cookie consent modal
-        var modal = new bootstrap.Modal(cookieConsent);
-        modal.show();
-    }
-    // Add event listener to accept button
-    document.getElementById("accept-button").addEventListener("click", function() {
-        // Set cookie
-        setCookie("cookie_consent", "true", 365);
-    });
-});

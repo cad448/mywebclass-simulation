@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test')
 
-test.describe('Responsive Design Test', () => {
+test.describe('Test Responsive Page', () => {
   let page
 
   test.beforeEach(async ({ browser }) => {
@@ -11,13 +11,13 @@ test.describe('Responsive Design Test', () => {
     await page.close()
   })
 
-  test('Test on desktop view', async () => {
+  test('Test on desktop', async () => {
     await page.goto('https://www.example.com')
     const viewport = page.viewportSize()
     expect(viewport.width).toBeGreaterThan(1024)
   })
 
-  test('Test on tablet view', async () => {
+  test('Test on tablet', async () => {
     await page.goto('https://www.example.com')
     await page.setViewportSize({ width: 768, height: 1024 })
     const viewport = page.viewportSize()

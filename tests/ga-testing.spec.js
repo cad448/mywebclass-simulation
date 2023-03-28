@@ -1,4 +1,3 @@
-// @ts-check
 const { test, expect } = require('@playwright/test')
 
 test('Google Analytics tracking ID should be present', async ({ page }) => {

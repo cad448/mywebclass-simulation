@@ -77,7 +77,7 @@ function loadGoogleAnalytics () {
 
   // Load the Google Analytics tracking code
   const script = document.createElement('script')
-  script.src = 'https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}'
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`
   script.async = true
   document.head.appendChild(script)
 

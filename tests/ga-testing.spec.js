@@ -1,6 +1,8 @@
+// @ts-check
 const { test, expect } = require('@playwright/test')
 
-test('Test Google Analytics Tracking ID', async ({ page }) => {
+test('Google Analytics tracking ID should be present', async ({ page }) => {
+  // Navigate to the website and wait for the page to load
   await page.goto('http://localhost:3000')
   await page.waitForLoadState('networkidle')
 

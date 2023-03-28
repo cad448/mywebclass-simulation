@@ -1,11 +1,11 @@
 const { test, expect } = require('@playwright/test')
 
-test.describe('Image Alt Attribute Testing', () => {
+test.describe('Image Alt attribute test', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('http://localhost:3000') // Replace with your website URL
   })
 
-  test('Test Whether The Images Have Alt Attribute', async ({ page }) => {
+  test('Check if all images have an alt attribute', async ({ page }) => {
     // Get all image elements on the page
     const imageElements = await page.$$('img')
 

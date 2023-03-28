@@ -11,8 +11,8 @@ test.describe('Image Alt attribute test', () => {
 
     // Iterate through image elements and check if they have an alt attribute
     for (let i = 0; i < imageElements.length; i++) {
-      const altText = await imageElements[i].getAttribute('alt')
-
+        const altText = await imageElements[i].getAttribute('alt')
+        await expect(altText).toBeTruthy()
     }
   })
 })

@@ -30,5 +30,4 @@ test.describe('Responsive Design Test', () => {
     const viewport = page.viewportSize()
     expect(viewport.width).toBe(360)
   })
-
 })

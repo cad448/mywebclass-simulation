@@ -13,7 +13,7 @@ test.describe('Language Test', () => {
 
   test('Should have correct language attribute', async () => {
     await page.goto('http://localhost:3000')
-    const lang = await page.getAttribute('html', 'lang')
-    expect(lang).toBe('EN') // english
+    const lang = await page.getAttribute('html', 'lang');
+    expect(lang).toBe('EN');
   })
 })
